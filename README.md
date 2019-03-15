@@ -101,52 +101,25 @@ NATACIÓN ADULTOS PARA MAYORES 50 AÑOS
 
 ## BAJA EN LAS ACTIVIDADES
 
-Se podrá solicitar la baja en un programa o actividad en cualquier momento, pero
-exclusivamente podrá solicitarse la devolución de las cuotas pagadas de aquellos meses
-pagados y no disfrutados, independientemente del sistema de pago elegido.
-A efectos estadísticos, habrá de mantenerse la información de aquellas personas que han
-estado inscritas en algún grupo durante el curso 2017/2018, aún después de haber
-causado baja (solo hasta el comienzo del siguiente curso), registrando la fecha efectiva
+Se podrá solicitar la baja en un programa o actividad en cualquier momento, pero exclusivamente podrá solicitarse la devolución de las cuotas pagadas de aquellos meses pagados y no disfrutados, independientemente del sistema de pago elegido.
+A efectos estadísticos, habrá de mantenerse la información de aquellas personas que han estado inscritas en algún grupo durante el curso 2017/2018, aún después de haber causado baja (solo hasta el comienzo del siguiente curso), registrando la fecha efectiva
 de baja en la base de datos.
 
 ## LISTA DE RESERVA
 
-1o Las listas quedarán por el orden que se corresponde de manera correlativa a la
-numeración otorgada para cada grupo de trabajo para el sorteo, al final de este listado
-se incorporarán las personas que realicen la reserva a partir del mes de octubre, en
-este caso el orden de prelación quedará determinado por el día hora de esta reserva,
-pero siempre a partir del último alumno que participó en el sorteo.
-2o Una vez que exista plaza vacante, desde el IMD o la entidad colaboradora avisará al
-número de teléfono consignado en la preinscripción de la plaza vacante, en caso que
-con esta llamada no sea posible contactar con el alumno, se realizará otra llamada en
-horario distinto y en caso de no ser posible su localización, se dará de baja al
+1. Las listas quedarán por el orden que se corresponde de manera correlativa a la numeración otorgada para cada grupo de trabajo para el sorteo, al final de este listado se incorporarán las personas que realicen la reserva a partir del mes de octubre, en
+este caso el orden de prelación quedará determinado por el día hora de esta reserva, pero siempre a partir del último alumno que participó en el sorteo.
+2. Una vez que exista plaza vacante, desde el IMD o la entidad colaboradora avisará al número de teléfono consignado en la preinscripción de la plaza vacante, en caso que con esta llamada no sea posible contactar con el alumno, se realizará otra llamada en horario distinto y en caso de no ser posible su localización, se dará de baja al
 alumno/a.
-Habrán de conocerse los preinscritos que están en reserva en un grupo y el orden que
-ocupan en dicha lista de reserva.
+Habrán de conocerse los preinscritos que están en reserva en un grupo y el orden que ocupan en dicha lista de reserva.
 
 ## GESTIÓN DEL PERSONAL
 
-La base de datos debe también completarse con los datos del personal que estará
-encargado de impartir las actividades a los diferentes grupos, a los que se denomina
-monitores. De cada monitor debemos tener los mismos datos personales que tenemos
-para los inscritos y, además, el número de la seguridad social y la fecha del contrato.
-Debemos tener en cuenta que un monitor podría también inscribirse como alumno en
-alguno de los grupos del mismo o distinto programa (por ejemplo, una monitora de tenis
+La base de datos debe también completarse con los datos del personal que estará encargado de impartir las actividades a los diferentes grupos, a los que se denomina monitores. De cada monitor debemos tener los mismos datos personales que tenemos para los inscritos y, además, el número de la seguridad social y la fecha del contrato. Debemos tener en cuenta que un monitor podría también inscribirse como alumno en alguno de los grupos del mismo o distinto programa (por ejemplo, una monitora de tenis
 podría estar inscrita en un grupo de pilates).
-Para un mejor control de las actividades este curso, el IMD ha decidido nombrar a
-cuatro monitores como responsables de cada uno de los programas (uno por programa).
-También, para todos los monitores, y dependiendo de las acreditaciones y títulos que
-haya aportado cada uno, se quieren almacenar en la base de datos aquellas modalidades
-deportivas en las que se le considera especialista (pueden ser varias).
-Lo más importante, sin embargo, es llevar un control exhaustivo de la asignación de
-monitores a los distintos grupos, tanto de su asignación actual (cada grupo solo tiene
-asignado un monitor pero un monitor podría dar clase a varios grupos) como a lo largo
-de todo el curso, porque es frecuente que los monitores roten por distintos grupos
-durante el curso, bien por necesidades del IMD, bajas de compañeros o con motivo de
-sus estudios (muchos son estudiantes del Grado en Ciencias del Deporte). Así pues, es
-preciso mantener información de a qué grupos imparte clase un monitor y desde cuándo,
-así como a qué grupos ha dado clase durante otros periodos de tiempo en el curso, almacenando información de dichos periodos. Es bastante probable, además, que un
-monitor esté asignado varias veces al mismo grupo en diferentes periodos de tiempo.
+Para un mejor control de las actividades este curso, el IMD ha decidido nombrar a cuatro monitores como responsables de cada uno de los programas (uno por programa). También, para todos los monitores, y dependiendo de las acreditaciones y títulos que
+haya aportado cada uno, se quieren almacenar en la base de datos aquellas modalidades deportivas en las que se le considera especialista (pueden ser varias). Lo más importante, sin embargo, es llevar un control exhaustivo de la asignación de monitores a los distintos grupos, tanto de su asignación actual (cada grupo solo tiene asignado un monitor pero un monitor podría dar clase a varios grupos) como a lo largo de todo el curso, porque es frecuente que los monitores roten por distintos grupos durante el curso, bien por necesidades del IMD, bajas de compañeros o con motivo de sus estudios (muchos son estudiantes del Grado en Ciencias del Deporte). Así pues, es preciso mantener información de a qué grupos imparte clase un monitor y desde cuándo,
+así como a qué grupos ha dado clase durante otros periodos de tiempo en el curso, almacenando información de dichos periodos. Es bastante probable, además, que un monitor esté asignado varias veces al mismo grupo en diferentes periodos de tiempo.
 
 # Desarrollo de la base de datos
 
@@ -351,34 +324,81 @@ Una vez diseñada e implementada la base de datos, se debían realizar algunas c
 1. Obtener la información de las preinscripciones que ha realizado la persona con DNI 01234567X, mostrando para cada preinscripción el número de solicitud que se le otorgó, la fecha y hora en que la realizó, el nombre del programa y de la modalidad deportiva en que se inscribió y el estado en que se encuentra dicha preinscripción. Téngase en cuenta que esta persona puede haber realizado preinscripciones para ella misma o para sus hijos. Ordenar por la fecha y hora.
 
 ```sql
-
+SELECT cod_preinscripcion, hora_preinscripcion, fecha_preinscripcion, nom_programa, nom_modalidad, estado
+FROM persona INNER JOIN 
+     alumno USING (cod_persona) INNER JOIN 
+     preinscripcion ON (alumno = cod_persona) INNER JOIN 
+     grupo ON (grupo = cod_grupo) INNER JOIN 
+     modalidad ON (modalidad = cod_modalidad) INNER JOIN 
+     programa ON (programa = cod_programa)
+WHERE dni = '01234567X' OR dni_progenitor = '01234567X'
+ORDER BY fecha_preinscripcion;
 ```
 
 2. Para cada modalidad deportiva dentro del programa de “Escuelas Deportivas”, obtener su nombre, el número de grupos que se han ofertado y el número total de plazas ofertadas de dicha modalidad.
 
 ```sql
-
+SELECT nom_modalidad, COUNT(cod_grupo) AS numero_grupos, SUM(num_max_plazas) AS total_plazas
+FROM modalidad INNER JOIN
+     grupo ON (cod_modalidad = modalidad)
+WHERE modalidad.programa IN ( SELECT cod_programa
+                              FROM programa
+                              WHERE nom_programa = 'Escuelas Deportivas')
+GROUP BY nom_modalidad;
 ```
 
 3. Mostrar los nombres de los programas y modalidades deportivas de los grupos a los que da clase la monitora cuyo nombre es Susana Moreno Recio.
 
 
 ```sql
-
+SELECT DISTINCT nom_programa, nom_modalidad
+FROM programa INNER JOIN 
+     modalidad ON (cod_programa = programa) INNER JOIN 
+     grupo ON (modalidad = cod_modalidad) INNER JOIN 
+     persona ON (monitor = cod_persona)
+WHERE nombre = 'Susana' AND apellido1 = 'Moreno' AND apellido2 = 'Recio';
 ```
 
 4. Mostrar los nombres completos y edades de los niños que han sido admitidos en algún grupo de la modalidad deportiva “Tenis” y que también han sido admitidos en algún grupo de la modalidad deportiva “Fútbol” (el niño que se obtenga debe estar admitido en los dos deportes). Ordenar por la edad de los niños, de menor a mayor, y a igual edad, alfabéticamente, por los apellidos y el nombre.
 
 
 ```sql
-
+SELECT nombre||' '||apellido1||' '||apellido2 AS nombre_completo, trunc((SYSDATE - fecha_nacimiento)/365) AS edad
+FROM persona INNER JOIN 
+     alumno USING(cod_persona)
+WHERE cod_persona IN (SELECT alumno
+                      FROM preinscripcion
+                      WHERE estado = 'A' AND
+                      cod_grupo IN (SELECT cod_grupo
+                                    FROM grupo
+                                    WHERE modalidad IN (SELECT cod_modalidad
+                                                        FROM modalidad
+                                                        WHERE nom_modalidad = 'Tenis'))
+                                                        INTERSECT
+                                                        SELECT alumno
+                                                        FROM preinscripcion
+                                                        WHERE estado = 'A' AND
+                                                        cod_grupo IN (SELECT cod_grupo
+                                                                      FROM grupo
+                                                                      WHERE modalidad IN (SELECT cod_modalidad
+                                                                                          FROM modalidad
+                                                                                          WHERE nom_modalidad = 'Futbol'
+                                                                                          )))
+      AND trunc((SYSDATE - fecha_nacimiento)/365) < 18
+ORDER BY edad, apellido1, apellido2, nombre;
 ```
 
 5. Para todos los grupos de modalidad deportiva “Aerobic” dentro del programa de “Deporte accesible” mostrar el número de grupo y el número de preinscritos por grupo, así como el número que se generó en el sorteo. Si hay grupos que no tienen ninguna persona preinscrita, deben salir también en el resultado con un total de 0 personas (obviamente estos grupos no tendrán asignado un número de sorteo). Ordenar por el número de preinscritos de mayor a menor y a igual número de preinscritos, por el número de grupo.
 
 
 ```sql
-
+SELECT cod_grupo, COUNT (cod_preinscripcion) AS "Numero de preinscritos", num_sorteo
+FROM grupo LEFT OUTER JOIN 
+     preinscripcion ON (cod_grupo = grupo)
+WHERE modalidad = (SELECT nom_modalidad
+                   FROM modalidad INNER JOIN programa ON (programa = cod_programa)
+                   WHERE nom_modalidad = 'Aerobic' AND nom_programa = 'Deporte accesible')
+ORDER BY "Numero de preinscritos" DESC, cod_grupo;
 ```
 
 6. Obtener los números de los grupos de la modalidad deportiva “Patinaje” que tienen clase los martes y se imparten en la instalación “Cuidad Deportiva”, indicando el horario que tienen ese día y el nombre completo del monitor que está actualmente
@@ -386,5 +406,78 @@ dando clase en ese grupo.
 
 
 ```sql
+SELECT cod_grupo, hora_inicio || ' - ' || hora_fin AS horario, nombre||' '||apellido1||' '||apellido2 AS nombre_monitor
+FROM persona INNER JOIN 
+     grupo ON (cod_persona = monitor) INNER JOIN 
+     instalacion ON (instalacion = cod_instalacion)
+WHERE modalidad IN (SELECT cod_modalidad
+                    FROM modalidad
+                    WHERE nom_modalidad = 'Patinaje') 
+      AND nom_instalacion = 'Ciudad Deportiva' 
+      AND (dia_1 = 'Martes' OR dia_2 = 'Martes');
+```
 
+7. Mostrar los nombres de las modalidades deportivas, junto con el nombre del programa al que pertenecen, de aquellas modalidades deportivas que tienen más de dos grupos que no han cubierto a día de hoy las plazas ofertadas. Ordenar por programa y
+modalidad deportiva.
+
+```sql
+SELECT nom_modalidad, nom_programa
+FROM modalidad INNER JOIN 
+     programa ON (programa = cod_programa) INNER JOIN 
+     grupo ON (cod_modalidad = modalidad)
+WHERE cod_grupo IN (SELECT g2.cod_grupo
+                    FROM grupo g2 INNER JOIN preinscripcion ON (g2.cod_grupo = grupo)
+                    WHERE g2.num_max_plazas < (SELECT COUNT (*)
+                                               FROM preinscripcion INNER JOIN grupo g3 ON (g3.cod_grupo = grupo)
+                                               WHERE fecha_preinscripcion <= SYSDATE AND (g2.cod_grupo = g3.cod_grupo)
+                                               GROUP BY g3.cod_grupo)
+                    )
+GROUP BY nom_modalidad, nom_programa
+HAVING COUNT (*) >= 2
+ORDER BY nom_programa, nom_modalidad;
+```
+
+8. Mostrar la edad media y el número de personas admitidas en la modalidad deportiva de “Pilates”.
+
+```sql
+SELECT AVG trunc((SYSDATE - fecha_nacimiento)/365)) AS edad_media, COUNT (*) AS num_admitidos
+FROM persona INNER JOIN 
+     preinscripcion ON (alumno = cod_persona) INNER JOIN 
+     grupo ON (grupo = cod_grupo)
+WHERE modalidad IN (SELECT cod_modalidad
+                    FROM modalidad
+                    WHERE nom_modalidad = 'Pilates')
+      AND estado = 'A';
+```
+
+9. Para cada monitor que da clase a grupos del programa “Gimnasia para mayores”, mostrar su dni y nombre completo, así como el número total de grupos que imparte. Mostrar solo los monitores que dan clase a más de dos grupos.
+
+```sql
+SELECT dni, nombre||' '||apellido1||' '||apellido2 AS nombre_monitor, COUNT(cod_grupo) AS total_grupos
+FROM persona INNER JOIN 
+     grupo ON (cod_persona = monitor) INNER JOIN 
+     modalidad ON (modalidad = cod_modalidad)
+WHERE programa IN (SELECT cod_programa
+                   FROM programa
+                   WHERE nom_programa = 'Gimnasia para mayores')
+GROUP BY cod_persona, nombre, apellido1, apellido2
+HAVING COUNT(cod_grupo) > 2;
+```
+
+10. Obtener el nombre de la/s modalidad/es deportiva/s dentro del programa de “Deporte Accesible” que cuenta/n con el mayor número de plazas ofertadas, mostrando además, dicho número de plazas.
+
+```sql
+SELECT cod_modalidad, nom_modalidad, SUM(num_max_plazas) AS total_plazas
+FROM modalidad INNER JOIN grupo ON (cod_modalidad = modalidad)
+WHERE programa IN (SELECT cod_programa
+                   FROM programa
+                   WHERE nom_programa = 'Deporte Accesible')
+GROUP BY cod_modalidad, nom_modalidad
+HAVING SUM(num_max_plazas) >= ALL (SELECT SUM(num_max_plazas) AS total_plazas
+                                   FROM modalidad INNER JOIN
+                                        grupo ON (cod_modalidad = modalidad)
+                                   WHERE programa IN (SELECT cod_programa
+                                                      FROM programa
+                                                      WHERE nom_programa = 'Deporte Accesible')
+                                   GROUP BY cod_modalidad, nom_modalidad);
 ```
