@@ -10,94 +10,52 @@ El enunciado del caso práctico fue proporcionado por la profesora del curso, <a
 
 # Enunciado
 
-Este curso se ha decidido proponer el diseño y la implementación de una base de datos
-basada en un caso real, el de las Escuelas Deportivas Municipales, gestionadas por el
-Instituto Municipal de Deportes (IMD), que depende del Ayuntamiento de Cáceres.
-Seguramente algunos de vosotros hace unos años habéis participado en este tipo de
-actividades en Cáceres o en otra localidad y habéis sufrido (o vuestros padres) el tener
-que hacer la inscripción en persona perdiendo el tiempo en largas colas o de manera
+Este curso se ha decidido proponer el diseño y la implementación de una base de datos basada en un caso real, el de las Escuelas Deportivas Municipales, gestionadas por el Instituto Municipal de Deportes (IMD), que depende del Ayuntamiento de Cáceres.
+Seguramente algunos de vosotros hace unos años habéis participado en este tipo de actividades en Cáceres o en otra localidad y habéis sufrido (o vuestros padres) el tener que hacer la inscripción en persona perdiendo el tiempo en largas colas o de manera
 telefónica.
-Desde hace un tiempo (por fin) la inscripción puede realizarse online y
-posteriormente se realiza un sorteo, si hay más demanda que oferta, para cada grupo de
-las distintas modalidades deportivas.
-La información completa del procedimiento de preinscripción, actividades y
-grupos disponibles, etc., está publicada en la web del ayuntamiento de Cáceres y puede
-descargarse de la web http://www.ayto-caceres.es/ciudadania/imd/escuelas-deportivas-
-y-deporte-accesible/.
-A continuación se ha extraído literalmente de dichos documentos (en cursiva) la
-información relevante a la parte de la base de datos que se propone diseñar y se
-comentan, además, algunos aspectos para aclarar o acotar de manera más precisa los
-datos que deben tenerse en cuenta. También, al final, se añaden nuevos supuestos
-inventados para hacer más completa la base de datos.
-Inicialmente es preciso aclarar que aunque el enunciado se denomina
-genéricamente Escuelas Deportivas, en realidad se ofertan cuatro programas de
-actividades deportivas: las escuelas deportivas, deporte accesible, gimnasia para
-mayores y natación adultos. La información relativa a cada uno de estos programas debe
-estar estandarizada, al igual que las modalidades deportivas que se integran en cada
-uno de los programas.
+Desde hace un tiempo (por fin) la inscripción puede realizarse online y posteriormente se realiza un sorteo, si hay más demanda que oferta, para cada grupo de las distintas modalidades deportivas. La información completa del procedimiento de preinscripción, actividades y grupos disponibles, etc., está publicada en la web del ayuntamiento de Cáceres y puede descargarse de la web http://www.ayto-caceres.es/ciudadania/imd/escuelas-deportivas-y-deporte-accesible/. A continuación se ha extraído literalmente de dichos documentos (en cursiva) la información relevante a la parte de la base de datos que se propone diseñar y se comentan, además, algunos aspectos para aclarar o acotar de manera más precisa los datos que deben tenerse en cuenta. También, al final, se añaden nuevos supuestos inventados para hacer más completa la base de datos.
+Inicialmente es preciso aclarar que aunque el enunciado se denomina genéricamente Escuelas Deportivas, en realidad se ofertan cuatro programas de actividades deportivas: las escuelas deportivas, deporte accesible, gimnasia para mayores y natación adultos. La información relativa a cada uno de estos programas debe estar estandarizada, al igual que las modalidades deportivas que se integran en cada uno de los programas.
 
 ## INFORMACIÓN GENERAL - PROGRAMAS DE ACTIVIDADES
 
 ### ESCUELAS DEPORTIVAS
 
-Podrán preinscribirse todas las personas interesadas, que estén debidamente
-empadronadas en la ciudad de Cáceres, con edades comprendidas entre los 3 y los 18
-años. La edad del participante para su preinscripción en cada uno de los grupos de las
-modalidades deportivas ofertadas, estará determinada exclusivamente por el año de su
-nacimiento. Las Escuelas Deportivas 2017/18 estarán abiertas para alumnos nacidos
-entre los años 2014 y 1999 ambos incluidos. Cada alumno podrá preinscribirse en un
+Podrán preinscribirse todas las personas interesadas, que estén debidamente empadronadas en la ciudad de Cáceres, con edades comprendidas entre los 3 y los 18 años. La edad del participante para su preinscripción en cada uno de los grupos de las modalidades deportivas ofertadas, estará determinada exclusivamente por el año de su nacimiento. Las Escuelas Deportivas 2017/18 estarán abiertas para alumnos nacidos entre los años 2014 y 1999 ambos incluidos. Cada alumno podrá preinscribirse en un
 máximo de 2 modalidades deportivas.
 
 ### DEPORTE ACCESIBLE
 
-Podrán inscribirse todas aquellas personas interesadas que estén debidamente
-empadronadas en la ciudad de Cáceres, con edades iguales o superiores a 16 años,
-entendiéndose como nacidos con anterioridad al año 2001, este incluido. Cada
-alumno/a solamente podrá preinscribirse en un grupo de trabajo.
+Podrán inscribirse todas aquellas personas interesadas que estén debidamente empadronadas en la ciudad de Cáceres, con edades iguales o superiores a 16 años, entendiéndose como nacidos con anterioridad al año 2001, este incluido. Cada alumno/a solamente podrá preinscribirse en un grupo de trabajo.
 
 ### GIMNASIA MAYORES
 
-Podrán inscribirse todos aquellas personas interesadas que estén debidamente
-empadronadas en la ciudad de Cáceres, que sean mayores de 16 años, entendiéndose
-esta edad como nacidos con anterioridad al año 2001, este incluido. Cada alumno/a
+Podrán inscribirse todos aquellas personas interesadas que estén debidamente empadronadas en la ciudad de Cáceres, que sean mayores de 16 años, entendiéndose esta edad como nacidos con anterioridad al año 2001, este incluido. Cada alumno/a
 solamente podrá preinscribirse en un grupo de trabajo.
 
 ### NATACIÓN PARA ADULTOS
 
-Podrán inscribirse todos aquellas personas interesadas que estén debidamente
-empadronadas en la ciudad de Cáceres, y nacidos con anterioridad a 1967, este año
-incluido (mayores de 50 años). Cada alumno/a solamente podrá preinscribirse en un
-grupo de trabajo, en el nivel elegido, iniciación, intermedio o perfeccionamiento.
+Podrán inscribirse todos aquellas personas interesadas que estén debidamente empadronadas en la ciudad de Cáceres, y nacidos con anterioridad a 1967, este año incluido (mayores de 50 años). Cada alumno/a solamente podrá preinscribirse en un grupo de trabajo, en el nivel elegido, iniciación, intermedio o perfeccionamiento.
 
 ## SISTEMA GENERAL DE PREINSCRPCIÓN
 
-El formulario exigirá para los mayores de 14 años la cumplimentación del NIF, y con
-éste se validará al usuario, que podrá continuar con la preinscripción. Para los
-menores de 14 años que NO dispongan de NIF, se procederá a rellenar el formulario
-pulsando en “SIN NIF”. En cualquier caso para menores de 18 años, será obligatorio
-incorporar el número del NIF de uno de sus progenitores, que será el que validará al
-usuario. Además, en todos los casos habrá de rellenarse el resto de los datos
+El formulario exigirá para los mayores de 14 años la cumplimentación del NIF, y con éste se validará al usuario, que podrá continuar con la preinscripción. Para los menores de 14 años que NO dispongan de NIF, se procederá a rellenar el formulario
+pulsando en “SIN NIF”. En cualquier caso para menores de 18 años, será obligatorio incorporar el número del NIF de uno de sus progenitores, que será el que validará al usuario. Además, en todos los casos habrá de rellenarse el resto de los datos
 personales que aparecen en el cuestionario .
 
 ##
 
-Una vez cumplimentados todos los datos exigidos en la pantalla anterior podrá pulsar
-el botón para continuar con la siguiente ventana donde se podrá seleccionar la
-modalidad deportiva elegida, la instalación, los días y la hora de los posibles grupos de
+Una vez cumplimentados todos los datos exigidos en la pantalla anterior podrá pulsar el botón para continuar con la siguiente ventana donde se podrá seleccionar la modalidad deportiva elegida, la instalación, los días y la hora de los posibles grupos de
 trabajo:
 
 ##
 
-Una vez elegidos los campos de la modalidad deportiva se pulsará en “Anotar
-Reserva” con lo que aparece el reporte de la preinscripción realizada .
+Una vez elegidos los campos de la modalidad deportiva se pulsará en “Anotar Reserva” con lo que aparece el reporte de la preinscripción realizada .
 
 ## 
 
 ## CONSULTA DE INSCRIPCIONES
 
-Todos los participantes tendrán a su disposición un formulario de consulta en la WEB
-municipal, donde podrán comprobar todos los datos de las inscripciones realizadas en
-cualquier momento.
+Todos los participantes tendrán a su disposición un formulario de consulta en la WEB municipal, donde podrán comprobar todos los datos de las inscripciones realizadas en cualquier momento.
 
 ##
 
@@ -105,47 +63,28 @@ cualquier momento.
 
 ## LISTADO DE GRUPOS DISPONIBLES
 
-En la documentación también se incluye el listado de grupos por programa y modalidad,
-con los datos relevantes que hay que almacenar para para cada grupo. A continuación se
-muestra parcialmente dicha información, solo para los programas escuelas deportivas y
-deporte accesible:
+En la documentación también se incluye el listado de grupos por programa y modalidad, con los datos relevantes que hay que almacenar para para cada grupo. A continuación se muestra parcialmente dicha información, solo para los programas escuelas deportivas y deporte accesible:
 
 ##
 
-Para simplificar podemos considerar que los grupos en todos los programas y
-modalidades se desarrollan siempre solo dos días a la semana y que esos dos días
-tienen el mismo horario en ese grupo.
+Para simplificar podemos considerar que los grupos en todos los programas y modalidades se desarrollan siempre solo dos días a la semana y que esos dos días tienen el mismo horario en ese grupo.
 
 ##
 
 ## SORTEO
 
-Una vez finalizado el plazo de las preinscripciones se realizará un sorteo de las plazas
-en aquellos grupos donde haya más solicitantes que plazas, de la siguiente manera:
-La adjudicación de plazas se realizará mediante un generador WEB de número
-aleatorios totalmente externo al Ayuntamiento de Cáceres, y del que se desconoce la
-fórmula que utiliza para establecer las secuencias aleatorias que proporciona. Este
-generador proporcionará un número aleatorio comprendido entre el número 1 y el
-asignado al último alumno/a preinscrito en cada grupo de trabajo. El número generado
-designará el primer inscrito y consecutivamente hasta agotar las plazas ofertadas por
-cada grupo, el resto quedarán en reserva según ese mismo orden.
-Es decir, será preciso almacenar el número que ha resultado del sorteo para cada grupo,
-con el fin de aceptar a los preinscritos a partir de ese número y hasta agotar las plazas
-del grupo (si se llega al último se comenzará otra vez por el preinscrito número 1 de
-cada grupo). Los que no sean aceptados quedarán en estado de reserva.
+Una vez finalizado el plazo de las preinscripciones se realizará un sorteo de las plazas en aquellos grupos donde haya más solicitantes que plazas, de la siguiente manera:
+La adjudicación de plazas se realizará mediante un generador WEB de número aleatorios totalmente externo al Ayuntamiento de Cáceres, y del que se desconoce la fórmula que utiliza para establecer las secuencias aleatorias que proporciona. Este
+generador proporcionará un número aleatorio comprendido entre el número 1 y el asignado al último alumno/a preinscrito en cada grupo de trabajo. El número generado designará el primer inscrito y consecutivamente hasta agotar las plazas ofertadas por
+cada grupo, el resto quedarán en reserva según ese mismo orden. Es decir, será preciso almacenar el número que ha resultado del sorteo para cada grupo, con el fin de aceptar a los preinscritos a partir de ese número y hasta agotar las plazas del grupo (si se llega al último se comenzará otra vez por el preinscrito número 1 de cada grupo). Los que no sean aceptados quedarán en estado de reserva.
 
-En los grupos donde el número de solicitantes es menor que el número de plazas no se
-necesitará hacer sorteo y todos los preinscritos serán admitidos.
+En los grupos donde el número de solicitantes es menor que el número de plazas no se necesitará hacer sorteo y todos los preinscritos serán admitidos.
 
 ## 
 
 ## PAGO
 
-No contemplaremos en nuestra base de datos la gestión del pago de las actividades.
-Únicamente recogeremos que cada programa tiene una serie de tarifas específicas
-(algunas precisan entregar cierta documentación), que se detallan a continuación, y que
-cada inscrito admitido deberá comunicar la tarifa a la que se acoge y la forma de pago
-(bimestral, cuatrimestral o anual).
+No contemplaremos en nuestra base de datos la gestión del pago de las actividades. Únicamente recogeremos que cada programa tiene una serie de tarifas específicas (algunas precisan entregar cierta documentación), que se detallan a continuación, y que cada inscrito admitido deberá comunicar la tarifa a la que se acoge y la forma de pago (bimestral, cuatrimestral o anual).
 
 ESCUELAS DEPORTIVAS
 * Tarifa General Bimestral: 18,00 €
@@ -209,7 +148,7 @@ preciso mantener información de a qué grupos imparte clase un monitor y desde 
 así como a qué grupos ha dado clase durante otros periodos de tiempo en el curso, almacenando información de dichos periodos. Es bastante probable, además, que un
 monitor esté asignado varias veces al mismo grupo en diferentes periodos de tiempo.
 
-# Desarrollo
+# Desarrollo de la base de datos
 
 En base al enunciado del caso práctico, se realizó el diagrama entidad/relación de la base de datos:
 
@@ -404,4 +343,48 @@ CREATE TABLE HIST_MONITOR (
   FOREIGN KEY (COD_PERSONA)
   REFERENCES MONITOR(COD_PERSONA)
 );
+```
+# Enunciado y resolución de todas las consultas:
+
+Una vez diseñada e implementada la base de datos, se debían realizar algunas consultas a la base de datos:
+
+1. Obtener la información de las preinscripciones que ha realizado la persona con DNI 01234567X, mostrando para cada preinscripción el número de solicitud que se le otorgó, la fecha y hora en que la realizó, el nombre del programa y de la modalidad deportiva en que se inscribió y el estado en que se encuentra dicha preinscripción. Téngase en cuenta que esta persona puede haber realizado preinscripciones para ella misma o para sus hijos. Ordenar por la fecha y hora.
+
+```sql
+
+```
+
+2. Para cada modalidad deportiva dentro del programa de “Escuelas Deportivas”, obtener su nombre, el número de grupos que se han ofertado y el número total de plazas ofertadas de dicha modalidad.
+
+```sql
+
+```
+
+3. Mostrar los nombres de los programas y modalidades deportivas de los grupos a los que da clase la monitora cuyo nombre es Susana Moreno Recio.
+
+
+```sql
+
+```
+
+4. Mostrar los nombres completos y edades de los niños que han sido admitidos en algún grupo de la modalidad deportiva “Tenis” y que también han sido admitidos en algún grupo de la modalidad deportiva “Fútbol” (el niño que se obtenga debe estar admitido en los dos deportes). Ordenar por la edad de los niños, de menor a mayor, y a igual edad, alfabéticamente, por los apellidos y el nombre.
+
+
+```sql
+
+```
+
+5. Para todos los grupos de modalidad deportiva “Aerobic” dentro del programa de “Deporte accesible” mostrar el número de grupo y el número de preinscritos por grupo, así como el número que se generó en el sorteo. Si hay grupos que no tienen ninguna persona preinscrita, deben salir también en el resultado con un total de 0 personas (obviamente estos grupos no tendrán asignado un número de sorteo). Ordenar por el número de preinscritos de mayor a menor y a igual número de preinscritos, por el número de grupo.
+
+
+```sql
+
+```
+
+6. Obtener los números de los grupos de la modalidad deportiva “Patinaje” que tienen clase los martes y se imparten en la instalación “Cuidad Deportiva”, indicando el horario que tienen ese día y el nombre completo del monitor que está actualmente
+dando clase en ese grupo.
+
+
+```sql
+
 ```
