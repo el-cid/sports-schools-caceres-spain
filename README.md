@@ -42,34 +42,34 @@ El formulario exigirá para los mayores de 14 años la cumplimentación del NIF,
 pulsando en “SIN NIF”. En cualquier caso para menores de 18 años, será obligatorio incorporar el número del NIF de uno de sus progenitores, que será el que validará al usuario. Además, en todos los casos habrá de rellenarse el resto de los datos
 personales que aparecen en el cuestionario .
 
-##
+![1](https://github.com/el-cid/sports-schools-caceres-spain/blob/master/pictures/1.png)
 
 Una vez cumplimentados todos los datos exigidos en la pantalla anterior podrá pulsar el botón para continuar con la siguiente ventana donde se podrá seleccionar la modalidad deportiva elegida, la instalación, los días y la hora de los posibles grupos de
 trabajo:
 
-##
+![2A](https://github.com/el-cid/sports-schools-caceres-spain/blob/master/pictures/2A.png)
 
 Una vez elegidos los campos de la modalidad deportiva se pulsará en “Anotar Reserva” con lo que aparece el reporte de la preinscripción realizada .
 
-## 
+![2B](https://github.com/el-cid/sports-schools-caceres-spain/blob/master/pictures/2B.png)
 
 ## CONSULTA DE INSCRIPCIONES
 
 Todos los participantes tendrán a su disposición un formulario de consulta en la WEB municipal, donde podrán comprobar todos los datos de las inscripciones realizadas en cualquier momento.
 
-##
+![3](https://github.com/el-cid/sports-schools-caceres-spain/blob/master/pictures/3.png)
 
-##
+![4](https://github.com/el-cid/sports-schools-caceres-spain/blob/master/pictures/4.png)
 
 ## LISTADO DE GRUPOS DISPONIBLES
 
 En la documentación también se incluye el listado de grupos por programa y modalidad, con los datos relevantes que hay que almacenar para para cada grupo. A continuación se muestra parcialmente dicha información, solo para los programas escuelas deportivas y deporte accesible:
 
-##
+![5](https://github.com/el-cid/sports-schools-caceres-spain/blob/master/pictures/5.png)
 
 Para simplificar podemos considerar que los grupos en todos los programas y modalidades se desarrollan siempre solo dos días a la semana y que esos dos días tienen el mismo horario en ese grupo.
 
-##
+![6](https://github.com/el-cid/sports-schools-caceres-spain/blob/master/pictures/6.png)
 
 ## SORTEO
 
@@ -80,7 +80,7 @@ cada grupo, el resto quedarán en reserva según ese mismo orden. Es decir, ser�
 
 En los grupos donde el número de solicitantes es menor que el número de plazas no se necesitará hacer sorteo y todos los preinscritos serán admitidos.
 
-## 
+![7](https://github.com/el-cid/sports-schools-caceres-spain/blob/master/pictures/7.png)
 
 ## PAGO
 
@@ -125,15 +125,15 @@ así como a qué grupos ha dado clase durante otros periodos de tiempo en el cur
 
 En base al enunciado del caso práctico, se realizó el diagrama entidad/relación de la base de datos:
 
-##
+![diagrama er](https://github.com/el-cid/sports-schools-caceres-spain/blob/master/pictures/diagrama%20er.png)
 
 Posteriormente se desarrolló un diagrama de relacional:
 
-##
+![diagrama relacional](https://github.com/el-cid/sports-schools-caceres-spain/blob/master/pictures/diagrama%20relacional.png)
 
 Se determinaron las dependencias funcionales y formas normales:
 
-##
+![dependencias](https://github.com/el-cid/sports-schools-caceres-spain/blob/master/pictures/dependencias.png)
 
 Se implemento el esquema de la base de datos en SQL:
 
